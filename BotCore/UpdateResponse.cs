@@ -1,4 +1,4 @@
-﻿namespace MUD.Core
+﻿namespace MUD.BotCore
 {
     class UpdateResponse
     {

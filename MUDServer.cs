@@ -1,4 +1,4 @@
-﻿using MUD.Core;
+﻿using MUD.BotCore;
 using MUD.Utils;
 
 namespace MUD
@@ -9,13 +9,9 @@ namespace MUD
     {
         public static async Task Main()
         {
-            string token;
-
             Env.Load(".env");
-            if ((token = Env.Item("token")) == null)
-            {
-                throw new Exception("Token not found.");
-            }
+            string? token = Env.Item("token");
+            ArgumentNullException.ThrowIfNullOrEmpty(token);
 
             var bot = new Bot(token);
             await bot.InfinityPolling();

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MUD.Core
+﻿namespace MUD.BotCore
 {
-    internal class User
+    internal class Chat
     {
         public int id { get; set; }
         public string first_name { get; set; }
